@@ -1,0 +1,100 @@
+.Gnb {
+  position: fixed;
+  top: 50%;
+  right: 50px;
+  transform: translateY(-50%);
+  z-index: 999;
+}
+
+.Gnb li {
+  width: 50px;
+}
+
+.Gnb li a {
+  position: relative;
+  display: block;
+  font-size: 0;
+  height: 15px;
+}
+
+.Gnb li a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 30%;
+  height: 2px;
+  background: pink;
+  transition: 0.5s;
+}
+
+.Gnb li.on a::after {
+  width: 100%;
+}
+
+.this_page {
+  position: absolute;
+  right: 0;
+  top: -50px;
+  white-space: nowrap;
+  /* 쪼그라드는거 없애줌 */
+  text-align: right;
+}
+
+/* .this_pic {
+  width: 100px;
+  height: 100px;
+  background: #f00 url(./assets/img/nums.png);
+  border-radius: 50%;
+} */
+
+/*
+.this_pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.this_pic img {
+  transition: 0.5s;
+}
+
+/* background로 깐 img는 transition가능 */
+/* .this_tp {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: url(assets/img/lesedilarona01.jpg) no-repeat center center/cover;
+  overflow: hidden;
+  transition: 0.5s;
+} */
+
+.section .txt {
+  text-align: center;
+  font-size: 100px;
+  opacity: 0;
+  transform: scale(1);
+}
+
+.section.on .txt {
+  text-align: center;
+  font-size: 100px;
+  transform: scale(2);
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.page03{
+  background: url(assets/img/lesedilarona01.jpg) no-repeat fixed center center/cover;
+}
+
+.page04{
+  filter: grayscale(1);
+  background: url(assets/img/lesedilarona02.jpg) no-repeat fixed center center/cover;
+}
+
+.Footer {
+  background: #333;
+  padding: 100px 0
+}
